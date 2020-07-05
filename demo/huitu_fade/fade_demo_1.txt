@@ -1,0 +1,9 @@
+fade_demo_1.mp4按顺序展示了以下6个换场动效：
+block_v_in
+scroll_D_in
+strip_V_in
+clock180
+clock360
+circle_I
+circle_O
+scroll_V_in
