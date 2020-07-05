@@ -36,7 +36,7 @@
 			"url": "../template/xianyu_20200704/bk.jpg",
 			"duration": {
 				"begin": "last_end",
-				"duration": 9
+				"duration": 13
 			},
 			"position": [
 				{
@@ -172,7 +172,7 @@
 			"duration": {
 				"begin": "last_end",
 				"delta": -1,
-				"duration": 2
+				"duration": 3
 			},
 			"position": [
 				{
@@ -190,6 +190,64 @@
 					"params": [
 						{"key": "duration", "value": 1},
 						{"key": "style", "value": "__ARG_fade_4__"}
+					]
+				}
+			]
+		},
+		{
+			"name": "img_clip6",
+			"type": "image",
+			"url": "__ARG_image_6__",
+			"duration": {
+				"begin": "last_end",
+				"delta": -1,
+				"duration": 3
+			},
+			"position": [
+				{
+					"start": 0,
+					"value": "(center, center)"
+				}
+			],
+			"fx": [
+				{
+					"func": "vfx.resize",
+					"params": [{"key": "width", "value": 720}]
+				},
+				{
+					"func": "huitu_vfx.crosscollapsein",
+					"params": [
+						{"key": "duration", "value": 1},
+						{"key": "style", "value": "__ARG_fade_5__"}
+					]
+				}
+			]
+		},
+		{
+			"name": "img_clip7",
+			"type": "image",
+			"url": "__ARG_image_7__",
+			"duration": {
+				"begin": "last_end",
+				"delta": -1,
+				"duration": 2
+			},
+			"position": [
+				{
+					"start": 0,
+					"value": "(center, center)"
+				}
+			],
+			"fx": [
+				{
+					"func": "vfx.resize",
+					"params": [{"key": "width", "value": 720}]
+				},
+				{
+					"func": "huitu_vfx.crosscollapsein",
+					"params": [
+						{"key": "duration", "value": 1},
+						{"key": "style", "value": "__ARG_fade_6__"}
 					]
 				}
 			]
