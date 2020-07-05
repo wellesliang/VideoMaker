@@ -4,4 +4,4 @@ ARG_image_2	../template/xianyu_20200704/demo/2.jpg
 ARG_image_3	../template/xianyu_20200704/demo/3.jpg
 ARG_image_4	../template/xianyu_20200704/demo/4.jpg
 ARG_image_5	../template/xianyu_20200704/demo/5.jpg
-ARG_title_1	œÃ”„
+ARG_title_1	Âí∏È±º
