@@ -1,0 +1,4 @@
+<p><a href="__url1__" style="font-size:15px" target="_blank">__desc__</a>
+<video id="example_video___id__" class="video-js vjs-default-skin" controls preload="none" width="320" height="480" data-setup="{}">
+<source src="__url2__" type="video/mp4">
+</video>
