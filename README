@@ -1,0 +1,11 @@
+Huitu Video
+===
+视频制作
+git push origin HEAD:refs/for/master
+
+依赖
+===
+
+支持功能：
+===
+请见template/test下的配置demo

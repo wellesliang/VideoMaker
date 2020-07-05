@@ -1,0 +1,75 @@
+依赖库包括
+opencv, moviepy, bos-py-sdk, redis, ImageMagick(可选，用于文本和gif制作，但均可替代), gizeh(可选，用于向量动画)
+
+基础工具：
+Linux公司机器：
+	安装Jumbo： bash -c "$( curl http://jumbo.baidu.com/install_jumbo.sh )"; source ~/.bashrc
+	安装python: jumbo install python
+	安装pip: jumbo install python-pip
+	升级pip: pip install --upgrade pip
+	升级安装工具: pip install --upgrade setuptools
+	安装: pip install ez_setup
+Window安装：
+	官网下载python和pip，并分别配置路径，pip在python安装目录的scripts下
+
+
+opencv；
+Linux公司机器：
+	jumbo install opencv
+Windows：
+	官网下载安装包
+
+
+scipy
+pip install scipy
+
+
+Freetype：支持中文字体
+Linux：
+	安装freetype bin：jumbo install freetype2
+	安装freetype python接口：pip install freetype-py
+WIndows：
+	官网安装freetype bin， 或者copy tools/freetype/freetype.dll到python环境根目录
+	安装freetype接口：pip install freetype-py
+
+
+moviepy
+安装中碰到问题参考： https://blog.csdn.net/kd_2015/article/details/80157713
+Linux：
+	pip install requests
+	pip install moviepy
+Windows：
+	pip install requests
+	pip install moviepy
+
+
+ImageMagic：
+已找到替代方案，后期可能取消依赖
+Linux：
+	yum install ImageMagick
+Window：
+	官网或百度
+
+
+gizeh
+实现矢量动画，暂无依赖
+安装步骤繁琐，linux window下均可能失败
+linux：
+yum install cairo-devel
+# pip install gizeh,可能会失败
+# pip install cairocffi
+# pip install cffi
+windows安装
+安装 cairo， 由于gtk打包了cairo，通过安装gtk的方式顺便安装cairo，安装网址：https://gtk-win.sourceforge.io/home/，注意阅读README
+再通过pip 安装python接口，pip install gizeh, windows 安装中会报错，cairoffi需要额外安装一个库，地址如下，或仔细看报错。
+
+
+redis：
+pip install redis
+
+
+安装BOS python接口:
+visit: https://cloud.baidu.com/doc/Downloadcenter/Python.html#SDK.E4.B8.8B.E8.BD.BD
+or direct download: https://sdk.bce.baidu.com/console-sdk/bce-python-sdk-0.8.19.zip
+(may failed due to: Crypto.Cipher, try: pip install pycrypto)
+
