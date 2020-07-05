@@ -58,7 +58,6 @@ class Fade(object):
 
 def set_demo_env_args(fname):
     """
-    在本地调试的时候，模拟线上调用设置环境参数，参数从文件读取
     """
     with open(fname) as f:
         for line in f:
@@ -68,7 +67,7 @@ def set_demo_env_args(fname):
 
 def get_template_args(str):
     """
-    在视频模板中找 __ARG_*__，用于替换成image，text，music等
+    find patten __ARG_*__, replaceimage，text，music
     :param str:
     :return:
     """
@@ -100,10 +99,9 @@ if __name__ == '__main__':
     fade_pr = Fade(resource_dir + '/fade/fade_list.txt')
     template_name = template_dir + template_name
 
-    # 合成视频的class
     vc = video_compositer.VideoCompositer('thread1')
 
-    # 打开模板并替换其中的通配符，如image，music，text等，模板是utf-8编码
+    # template should be utf-8
     with open(template_name) as f:
         jsn_str = f.read()
     for pat_name, arg_name in get_template_args(jsn_str):
@@ -124,13 +122,10 @@ if __name__ == '__main__':
 
         jsn_str = jsn_str.replace(pat_name, value)
 
-    # 加载视频模板
     vt = video_template.VideoTemplate(None, jsn_str)
     if vt.is_invalid():
         sys.exit(4)
 
-    # 生成视频。常规生成mp4格式；如果用于网络流播放，生成ogv格式。
-    # 如果用于双路输出，调用save_multi
     out_name = os.getenv('RESULT_VIDEO_PATH')
     out_name = template_name.replace('.json', '.mp4') if out_name is None else out_name
     ogv_name = template_name.replace('.json', '.ogv')
