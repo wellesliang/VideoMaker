@@ -9,3 +9,21 @@ git push origin HEAD:refs/for/master
 支持功能：
 ===
 请见template/test下的配置demo
+
+
+===
+for moviepy bug fix:
+drawing.py
+def color_gradient
+from line 140:
+change to:
+    if vector is None:
+        if p2 is not None:
+            p2 = np.array(p2[::-1])
+            vector = p2-p1
+    else:
+        vector = np.array(vector[::-1])
+        p2 = p1 + vector
+
+    if vector is not None:
+        norm = np.linalg.norm(vector)

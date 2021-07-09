@@ -169,7 +169,7 @@ def clock360(clip, duration):
 
         ang = math.pi * 2.0 * t / duration
         vec = (-math.sin(ang), math.cos(ang))
-        xc, yc = (int(im.shape[1] / 2), int(im.shape[0] / 2))
+        xc, yc = (im.shape[1] // 2, im.shape[0] // 2)
         size = (im.shape[1], im.shape[0])
         im = drawing.color_split(size, p1=(xc, yc), vector=vec, grad_width=10)
         if ang <= math.pi * 0.5:
