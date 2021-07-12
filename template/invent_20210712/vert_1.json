@@ -13,7 +13,7 @@
 		{
             "name": "img_begin",
 			"type": "image",
-			"url": "../template/xianyu_20200704/begin.jpg",
+			"url": "../template/invent_20210712/begin.jpg",
 			"position": [
 				{
 					"start": 0,
@@ -34,7 +34,7 @@
 		{
             "name": "img_bk",
 			"type": "image",
-			"url": "../template/xianyu_20200704/bk.jpg",
+			"url": "../template/invent_20210712/bk.jpg",
 			"duration": {
 				"begin": "last_end",
 				"duration": 13
@@ -227,7 +227,7 @@
 		{
             "name": "img_ending",
 			"type": "image",
-			"url": "../template/xianyu_20200704/end.jpg",
+			"url": "../template/invent_20210712/end.jpg",
 			"duration": {
 				"begin": "last_end",
 				"duration": 1.5

@@ -1,21 +1,21 @@
-huitu_vfx/blink.mp4	ÉÁË¸
-huitu_vfx/blur.mp4	Ä£ºı
-huitu_vfx/delux.mp4	ìÅ²Ê
-huitu_vfx/phantom1.mp4	»ÃÏó1
-huitu_vfx/phantom2.mp4	»ÃÏó2
-huitu_vfx/typing.mp4	´ò×Ö
-huitu_vfx/typing_center.mp4	´ò×Ö2
-product/suning_1111.mp4	Æë¼Ò¿ìÉÁ·ç¸ñ
-product/horz2vert.mp4	¶¶Òôºá×ªÊú
-product/ppt_qiche.mp4	¶şÊÖ³µppt·ç¸ñ
-product/vip_hufu.mp4	Î¨Æ·»áºá×ªÊú
-weidong/cosmestic02.mp4	»¯×±Æ·Î¢¶¯
-weidong/cosmestic03.mp4	»¯×±Æ·Î¢¶¯
-weidong/cosmestic04.mp4	»¯×±Æ·Î¢¶¯
-weidong/dress01.mp4	ÒÂ·şÎ¢¶¯
-weidong/ppt_demo_wd2.mp4	»¯×±Æ·Î¢¶¯ppt
-weidong/wd01.mp4	·ç¾°Î¢¶¯
-huitu_fade/fade_demo_1.mp4	»»³¡¶¯»­
-movement/cascade.mp4	ÏÂÂä
-movement/decel_accel.mp4	¼õËÙ¼ÓËÙ
-movement/vortex_in.mp4	·ÉÈë
+huitu_vfx/blink.mp4	é—ªçƒ
+huitu_vfx/blur.mp4	æ¨¡ç³Š
+huitu_vfx/delux.mp4	ç‚«å½©
+huitu_vfx/phantom1.mp4	å¹»è±¡1
+huitu_vfx/phantom2.mp4	å¹»è±¡2
+huitu_vfx/typing.mp4	æ‰“å­—
+huitu_vfx/typing_center.mp4	æ‰“å­—2
+product/suning_1111.mp4	é½å®¶å¿«é—ªé£æ ¼
+product/horz2vert.mp4	æŠ–éŸ³æ¨ªè½¬ç«–
+product/ppt_qiche.mp4	äºŒæ‰‹è½¦ppté£æ ¼
+product/vip_hufu.mp4	å”¯å“ä¼šæ¨ªè½¬ç«–
+weidong/cosmestic02.mp4	åŒ–å¦†å“å¾®åŠ¨
+weidong/cosmestic03.mp4	åŒ–å¦†å“å¾®åŠ¨
+weidong/cosmestic04.mp4	åŒ–å¦†å“å¾®åŠ¨
+weidong/dress01.mp4	è¡£æœå¾®åŠ¨
+weidong/ppt_demo_wd2.mp4	åŒ–å¦†å“å¾®åŠ¨ppt
+weidong/wd01.mp4	é£æ™¯å¾®åŠ¨
+huitu_fade/fade_demo_1.mp4	æ¢åœºåŠ¨ç”»
+movement/cascade.mp4	ä¸‹è½
+movement/decel_accel.mp4	å‡é€ŸåŠ é€Ÿ
+movement/vortex_in.mp4	é£å…¥

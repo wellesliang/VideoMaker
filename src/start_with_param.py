@@ -111,7 +111,7 @@ def load_item(conf, return_num = 1):
 
 
 if __name__ == '__main__':
-    conf_name = '../template/invent_20210712/conf.yaml'
+    conf_name = '../conf/invent.yaml'
     with open(conf_name) as f:
         conf = yaml.load(f)
 
