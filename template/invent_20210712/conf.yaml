@@ -1,0 +1,23 @@
+resource:
+  path: ../resource
+
+templates:
+  - ../template/invent_20210712/vert_1.json
+
+item:
+  image_num: 6
+  path: ../template/invent_20210712/items/bags.csv
+
+demo:
+  item_id: 3162943374
+  image1: ../template/xianyu_20200704/demo/1.jpg
+  image2: ../template/xianyu_20200704/demo/2.jpg
+  image3: ../template/xianyu_20200704/demo/3.jpg
+  image4: ../template/xianyu_20200704/demo/4.jpg
+  image5: ../template/xianyu_20200704/demo/5.jpg
+  image6: ../template/xianyu_20200704/demo/1.jpg
+  title: Kate Spade Leila Mini Flap -
+  first: Clothing, Shoes & Accessories
+  second: Women
+  third: Women's Bags & Handbags
+

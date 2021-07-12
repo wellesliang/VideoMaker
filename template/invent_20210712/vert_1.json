@@ -1,4 +1,5 @@
 {
+	"name": "Invent_1",
 	"size": {
 		"width": 720,
 		"height": 1280
@@ -54,7 +55,7 @@
 		{
 			"name": "img_clip1",
 			"type": "image",
-			"url": "__ARG_image_1__",
+			"url": "__ARG_image1__",
 			"duration": {
 				"begin": "last_begin",
 				"duration": 2
@@ -75,7 +76,7 @@
 		{
 			"name": "img_clip2",
 			"type": "image",
-			"url": "__ARG_image_2__",
+			"url": "__ARG_image2__",
 			"duration": {
 				"begin": "last_end",
 				"delta": -1,
@@ -110,7 +111,7 @@
 		{
 			"name": "img_clip3",
 			"type": "image",
-			"url": "__ARG_image_3__",
+			"url": "__ARG_image3__",
 			"duration": {
 				"begin": "last_end",
 				"delta": -1,
@@ -139,7 +140,7 @@
 		{
 			"name": "img_clip4",
 			"type": "image",
-			"url": "__ARG_image_4__",
+			"url": "__ARG_image4__",
 			"duration": {
 				"begin": "last_end",
 				"delta": -1,
@@ -168,7 +169,7 @@
 		{
 			"name": "img_clip5",
 			"type": "image",
-			"url": "__ARG_image_5__",
+			"url": "__ARG_image5__",
 			"duration": {
 				"begin": "last_end",
 				"delta": -1,
@@ -197,7 +198,7 @@
 		{
 			"name": "img_clip6",
 			"type": "image",
-			"url": "__ARG_image_6__",
+			"url": "__ARG_image6__",
 			"duration": {
 				"begin": "last_end",
 				"delta": -1,
@@ -219,35 +220,6 @@
 					"params": [
 						{"key": "duration", "value": 1},
 						{"key": "style", "value": "__ARG_fade_5__"}
-					]
-				}
-			]
-		},
-		{
-			"name": "img_clip7",
-			"type": "image",
-			"url": "__ARG_image_7__",
-			"duration": {
-				"begin": "last_end",
-				"delta": -1,
-				"duration": 2
-			},
-			"position": [
-				{
-					"start": 0,
-					"value": "(center, center)"
-				}
-			],
-			"fx": [
-				{
-					"func": "vfx.resize",
-					"params": [{"key": "width", "value": 720}]
-				},
-				{
-					"func": "huitu_vfx.crosscollapsein",
-					"params": [
-						{"key": "duration", "value": 1},
-						{"key": "style", "value": "__ARG_fade_6__"}
 					]
 				}
 			]

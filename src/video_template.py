@@ -31,6 +31,7 @@ class VideoTemplate(object):
             logging.fatal(jsn_str)
             return
 
+        self.name = jsn.get('name')
         self.size = jsn.get('size', None)
         if self.size is None:
             logging.fatal('expect size')

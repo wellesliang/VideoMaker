@@ -12,7 +12,9 @@ Date:    2018/06/21 11:55:06
 import re
 import os
 import sys
+import csv
 import random
+import yaml
 import traceback
 import video_template
 import video_compositer
@@ -58,6 +60,7 @@ class Fade(object):
 
 def set_demo_env_args(fname):
     """
+    在本地调试的时候，模拟线上调用设置环境参数，参数从文件读取
     """
     with open(fname) as f:
         for line in f:
@@ -73,66 +76,78 @@ def get_template_args(str):
     """
     pat = re.compile('__ARG_[\w]+__')
     all_pats = set(pat.findall(jsn_str))
-    all_pats = [(pat_name, pat_name[2: -2]) for pat_name in all_pats]
+    all_pats = [(pat_name, pat_name[6: -2]) for pat_name in all_pats]
     return all_pats
 
 
-if __name__ == '__main__':
-    template_dir = '../template/'
-    resource_dir = '../resource/'
+def load_item_from_file(filename, filter):
+    items = []
+    with open(filename, encoding='utf-8-sig') as f:
+        for row in csv.DictReader(f):
+            if 'image_num' in filter and len(row['PICTURE_URL'].split(';')) < filter['image_num']:
+                continue
+            item = {'item_id': row['item_id'],
+                    'title': row['AUCT_TITL'],
+                    'first': row['META_CATEG_NAME'],
+                    'second': row['CATEG_LVL2_NAME'],
+                    'third': row['CATEG_LVL3_NAME']}
+            for i, url in enumerate(row['PICTURE_URL'].split(';')):
+                item[f'image{i+1}'] = url
+            items.append(item)
+    return items
 
-    if len(sys.argv) >= 2:
-        template_name = sys.argv[1]
-        verbose = False
+
+def load_item_from_demo(demo):
+    return demo
+
+
+def load_item(conf, return_num = 1):
+    if 'item' in conf and 'path' in conf['item']:
+        items = load_item_from_file(conf['item']['path'], conf['item'])
     else:
-        sub_dir = 'xianyu_20200704'
-        tpl_fname = 'vert_1.json'
-        #tpl_fname = 'vert_2_ending.json'
-        template_name = sub_dir + '/' + tpl_fname
-        set_demo_env_args(template_dir + sub_dir + '/demo/demo_args1.txt')
-        verbose = True
+        items = [load_item_from_demo(conf['demo'])]
+    random.shuffle(items)
+    return items[0: return_num]
 
-    if not os.path.isfile(template_dir + template_name):
-        print(f'Not found {template_dir}/{template_name}')
-        sys.exit(1)
+
+if __name__ == '__main__':
+    conf_name = '../template/invent_20210712/conf.yaml'
+    with open(conf_name) as f:
+        conf = yaml.load(f)
+
+    resource_dir = conf['resource']['path']
     music_pr = Music(resource_dir + '/audios/')
     fade_pr = Fade(resource_dir + '/fade/fade_list.txt')
-    template_name = template_dir + template_name
 
-    vc = video_compositer.VideoCompositer('thread1')
+    for item in load_item(conf, return_num=1):
+        for template_path in conf['templates']:
+            # template should be utf-8
+            with open(template_path) as f:
+                jsn_str = f.read()
+            for pat_name, arg_name in get_template_args(jsn_str):
+                value = item.get(arg_name, None)
+                if value is None:
+                    if arg_name[0: 5] == 'music':
+                        value = music_pr.get_rand_music_file()
+                    elif arg_name[0: 4] == 'fade':
+                        value = fade_pr.get_rand_fade_name()
+                    else:
+                        raise Exception(f'Unknown argname: {pat_name}')
+                jsn_str = jsn_str.replace(pat_name, value)
 
-    # template should be utf-8
-    with open(template_name) as f:
-        jsn_str = f.read()
-    for pat_name, arg_name in get_template_args(jsn_str):
-        value = os.getenv(arg_name)
-        if value is not None:
-            try:
-                value = value
-            except:
-                traceback.print_exc()
-                sys.exit(3)
-        if value is None:
-            if arg_name[0: 9] == 'ARG_music':
-                value = music_pr.get_rand_music_file()
-            elif arg_name[0: 8] == 'ARG_fade':
-                value = fade_pr.get_rand_fade_name()
-            else:
-                sys.exit(2)
+            vt = video_template.VideoTemplate(None, jsn_str)
+            if vt.is_invalid():
+                raise Exception(f'Load template: {template_path} failed')
 
-        jsn_str = jsn_str.replace(pat_name, value)
-
-    vt = video_template.VideoTemplate(None, jsn_str)
-    if vt.is_invalid():
-        sys.exit(4)
-
-    out_name = os.getenv('RESULT_VIDEO_PATH')
-    out_name = template_name.replace('.json', '.mp4') if out_name is None else out_name
-    ogv_name = template_name.replace('.json', '.ogv')
-    video = vc.composit(vt)
-    if video is None:
-        sys.exit(5)
-    video.save(out_name, verbose=verbose)
-    # video.save(ogv_name, verbose=verbose, progress_bar=progress_bar)
-    # video.save_multi(out_name, ogv_name, verbose=verbose, progress_bar=progress_bar)
+            # 生成视频。常规生成mp4格式；如果用于网络流播放，生成ogv格式。
+            # 如果用于双路输出，调用save_multi
+            out_name = template_path.replace('.json', '.mp4')
+            ogv_name = template_path.replace('.json', '.ogv')
+            vc = video_compositer.VideoCompositer('thread1')
+            video = vc.composit(vt)
+            if video is None:
+                raise Exception(f'Video compositer failed, template: {vt.name}')
+            video.save(out_name, verbose=True)
+            # video.save(ogv_name, verbose=verbose, progress_bar=progress_bar)
+            # video.save_multi(out_name, ogv_name, verbose=verbose, progress_bar=progress_bar)
 

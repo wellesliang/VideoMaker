@@ -1,9 +1,0 @@
-ARG_pid	3162943374
-ARG_image_1	../template/xianyu_20200704/demo/1.jpg
-ARG_image_2	../template/xianyu_20200704/demo/2.jpg
-ARG_image_3	../template/xianyu_20200704/demo/3.jpg
-ARG_image_4	../template/xianyu_20200704/demo/4.jpg
-ARG_image_5	../template/xianyu_20200704/demo/5.jpg
-ARG_image_6	../template/xianyu_20200704/demo/1.jpg
-ARG_image_7	../template/xianyu_20200704/demo/2.jpg
-ARG_title_1	咸鱼

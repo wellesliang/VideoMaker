@@ -17,6 +17,7 @@ import urllib
 import socket
 import traceback
 
+
 def hist_equalization(img, blocksize=8):
     """
     histogram_equalization by hsv color space
@@ -63,8 +64,8 @@ def get_img_from_url(url):
     :return: ndarrar, or None if connect error or url error
     """
     try:
-        socket.setdefaulttimeout(60)
-        resp = urllib.urlopen(url)
+        socket.setdefaulttimeout(10)
+        resp = urllib.request.urlopen(url)
         img = np.asarray(bytearray(resp.read()), dtype="uint8")
         img = cv.imdecode(img, cv.IMREAD_UNCHANGED)
     except:
