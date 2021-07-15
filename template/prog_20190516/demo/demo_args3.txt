@@ -1,0 +1,8 @@
+ARG_userid	25722715
+ARG_unitid	4013819396 
+ARG_image_1	https://paimgcdn-feed.baidu.com/v.07783A25C909A83C81439DD16645BA66?src=http%3A%2F%2Ffc-feed.cdn.bcebos.com%2F0%2Fpic%2Fb3cadd931032cb0049b71f1cf9aa32de.jpg&rz=ar_3_1140_640
+ARG_image_2	https://paimgcdn-feed.baidu.com/v.5ABC11FF1DFC11BFAB235411EC151EA4?src=http%3A%2F%2Ffc-feed.cdn.bcebos.com%2F0%2Fpic%2Fb861c570985389c428ebaf2c8070df21.jpg&rz=ar_3_1140_640
+ARG_image_3	https://paimgcdn-feed.baidu.com/v.A9557F92E75636FB6594FBCEEB3EF7E8?src=http%3A%2F%2Ffc-feed.cdn.bcebos.com%2F0%2Fpic%2F84acca6446c49b805414d5ca75f91f96.jpg&rz=ar_3_1140_640
+ARG_image_4	https://paimgcdn-feed.baidu.com/v.AC82D2977017DBD17855C7CFC5288300?src=http%3A%2F%2Ffc-feed.cdn.bcebos.com%2F0%2Fpic%2Fa648d2ad30d9bbf1ce0ad1a5f9090d0a.jpg&rz=ar_3_1140_640
+ARG_image_5	https://paimgcdn-feed.baidu.com/v.B0E82DCD6BED4A4FB531556958D9F130?src=http%3A%2F%2Ffc-feed.cdn.bcebos.com%2F0%2Fpic%2Fb931ef2bd3a3ba58fd417e74a902c871.jpg&rz=ar_3_1140_640
+ARG_title_1	衬衫

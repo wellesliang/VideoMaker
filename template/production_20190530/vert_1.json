@@ -1,0 +1,185 @@
+{
+    "size": {
+        "width": 720,
+        "height": 1280
+    },
+    "color": [0, 0, 0],
+    "video_aspect_threshold": [
+    ],
+    "fps": 24,
+    "duration": -1,
+    "videoclips": [
+        {
+            "name": "img_clip1",
+            "type": "image_nomask",
+            "url": "__ARG_image_1__",
+            "duration": {
+                "begin": 0,
+                "duration": 3
+            },
+            "position": [
+                {
+                    "start": 0,
+                    "value": "(center, center)"
+                }
+            ],
+            "fx": [
+                {
+                    "func": "huitu_vfx.resize_overlap_blur",
+                    "params": [
+                        {"key": "width", "value": 720},
+                        {"key": "height", "value": 1280},
+                        {"key": "edge", "value": "width"},
+                        {"key": "size", "value": 720}
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "img_clip2",
+            "type": "image",
+            "url": "../template/production_20190530/bk_720x1280.jpg",
+            "duration": {
+                "begin": "last_end",
+                "delta": 0,
+                "duration": 3
+            },
+            "position": [
+                {
+                    "start": 0,
+                    "value": "(center, center)"
+                }
+            ],
+            "fx": [
+                {
+                    "func": "huitu_vfx.float_layer",
+                    "params": [
+                        {"key": "x1", "value": 90},
+                        {"key": "x2", "value": 630},
+                        {"key": "y1", "value": 512},
+                        {"key": "y2", "value": 768},
+                        {"key": "transparent", "value": 1.0},
+                        {"key": "text", "value": "__ARG_brand__"},
+                        {"key": "font", "value": "PingFang Bold"},
+                        {"key": "size", "value": 300},
+                        {"key": "color", "value": [255, 255, 255]}
+                    ]
+                },
+                {
+                    "func": "huitu_vfx.phantom1",
+                    "params": [
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "img_clip3",
+            "type": "image",
+            "url": "../template/production_20190530/bk_720x1280.jpg",
+            "duration": {
+                "begin": "last_end",
+                "delta": 0,
+                "duration": 4
+            },
+            "position": [
+                {
+                    "start": 0,
+                    "value": "(center, center)"
+                }
+            ],
+            "fx": [
+                {
+                    "func": "huitu_vfx.float_layer",
+                    "params": [
+                        {"key": "x1", "value": 90},
+                        {"key": "x2", "value": 630},
+                        {"key": "y1", "value": 512},
+                        {"key": "y2", "value": 768},
+                        {"key": "transparent", "value": 1.0},
+                        {"key": "text", "value": "__ARG_title__"},
+                        {"key": "font", "value": "PingFang Bold"},
+                        {"key": "size", "value": 200},
+                        {"key": "color", "value": [255, 0, 0]}
+                    ]
+                },
+                {
+                    "func": "huitu_vfx.delux_image",
+                    "params": [
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "img_clip4",
+            "type": "image_nomask",
+            "url": "__ARG_image_1__",
+            "duration": {
+                "begin": "last_end",
+                "delta": -1,
+                "duration": 4
+            },
+            "position": [
+                {
+                    "start": 0,
+                    "value": "(center, center)"
+                }
+            ],
+            "fx": [
+                {
+                    "func": "huitu_vfx.resize_overlap_blur",
+                    "params": [
+                        {"key": "width", "value": 720},
+                        {"key": "height", "value": 1280},
+                        {"key": "edge", "value": "width"},
+                        {"key": "size", "value": 720}
+                    ]
+                },
+				{
+					"func": "huitu_vfx.crosscollapsein",
+					"params": [
+						{"key": "duration", "value": 1},
+						{"key": "style", "value": "__ARG_fade_1__"}
+					]
+				}
+            ]
+        },
+        {
+            "name": "img_clip5",
+            "type": "image",
+            "url": "../template/production_20190530/bk_720x1280.jpg",
+            "duration": {
+                "begin": "last_end",
+                "delta": 0,
+                "duration": 3
+            },
+            "position": [
+                {
+                    "start": 0,
+                    "value": "(center, center)"
+                }
+            ],
+            "fx": [
+                {
+                    "func": "huitu_vfx.float_layer",
+                    "params": [
+                        {"key": "x1", "value": 90},
+                        {"key": "x2", "value": 6300},
+                        {"key": "y1", "value": 512},
+                        {"key": "y2", "value": 768},
+                        {"key": "transparent", "value": 1.0},
+                        {"key": "text", "value": "__ARG_brand__"},
+                        {"key": "font", "value": "PingFang Bold"},
+                        {"key": "size", "value": 300},
+                        {"key": "color", "value": [255, 255, 255]}
+                    ]
+                }
+            ]
+        }
+    ],
+    "audioclips": [
+        {
+            "type": "audiofile",
+            "url": "__ARG_music_1__"
+        }
+    ]
+}

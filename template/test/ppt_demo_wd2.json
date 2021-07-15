@@ -1,0 +1,108 @@
+{
+	"size": {
+		"width": 720,
+		"height": 1280
+	},
+	"color": [255, 255, 0],
+	"video_aspect_threshold": [
+	],
+	"fps": 36,
+	"duration": 24,
+	"videoclips": [
+		{
+			"name": "img_clip1-1",
+			"type": "video",
+			"url": "../output/weidong_demo/cosmestic01.mp4",
+			"duration": {
+				"begin": 0,
+				"end": 6
+			},
+			"position": [
+				{
+					"start": 0,
+					"value": "(center, center)"
+				}
+			],
+			"fx": [
+			]
+		},
+		{
+			"name": "img_clip2",
+			"type": "video",
+			"url": "../output/weidong_demo/cosmestic02.mp4",
+			"duration": {
+				"begin": 5,
+				"end": 12
+			},
+			"position": [
+				{
+					"start": 0,
+					"value": "(center, center)"
+				}
+			],
+			"fx": [
+				{
+					"func": "huitu_vfx.crosscollapsein",
+					"params": [
+						{"key": "duration", "value": 1},
+						{"key": "style", "value": "block_V_in"}
+					]
+				}
+			]
+		},
+		{
+			"name": "img_clip3",
+			"type": "video",
+			"url": "../output/weidong_demo/cosmestic03.mp4",
+			"duration": {
+				"begin": 11,
+				"end": 18
+			},
+			"position": [
+				{
+					"start": 0,
+					"value": "(center, center)"
+				}
+			],
+			"fx": [
+				{
+					"func": "huitu_vfx.crosscollapsein",
+					"params": [
+						{"key": "duration", "value": 1},
+						{"key": "style", "value": "circle_I"}
+					]
+				}
+			]
+		},
+		{
+			"name": "img_clip4",
+			"type": "video",
+			"url": "../output/weidong_demo/cosmestic04.mp4",
+			"duration": {
+				"begin": 17,
+				"end": 24
+			},
+			"position": [
+				{
+					"start": 0,
+					"value": "(center, center)"
+				}
+			],
+			"fx": [
+				{
+					"func": "huitu_vfx.crosscollapsein",
+					"params": [
+						{"key": "duration", "value": 1},
+						{"key": "style", "value": "strip_V_in"}
+					]
+				}
+			]
+		}
+	],
+	"audioclips": [
+		{
+			"type": "audiofile",
+			"url": "../output/X-Ray Dog - Booty Shorts (Drums).mp3"
+		}
+	]
+}

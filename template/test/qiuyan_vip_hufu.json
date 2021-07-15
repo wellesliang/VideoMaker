@@ -1,0 +1,47 @@
+{
+	"size": {
+		"width": 720,
+		"height": 1280
+	},
+	"color": [0, 0, 0],
+	"video_aspect_threshold": [
+	],
+	"fps": 24,
+	"duration": 39.9,
+	"videoclips": [
+		{
+            "name": "img_clip1",
+			"type": "image",
+			"url": "../output/qiuyan_vip_hufu/bk.jpg",
+			"position": [
+				{
+					"start": 0,
+					"value": "(0, 200)"
+				}
+			],
+			"fx": [
+				{
+					"func": "vfx.resize",
+					"params": [{"key": "newsize", "value": "(720, 400)"}]
+				}
+			]
+		},
+		{
+            "name": "video_clip1",
+			"type": "video",
+			"url": "../output/qiuyan_vip_hufu/qiuyan.mp4",
+			"position": [
+				{
+					"start": 0,
+					"value": "(-70, 600)"
+				}
+			],
+			"fx": [
+				{
+					"func": "vfx.resize",
+					"params": [{"key": "width", "value": 860}]
+				}
+			]
+		}
+	]
+}

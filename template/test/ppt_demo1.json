@@ -1,0 +1,289 @@
+{
+	"size": {
+		"width": 720,
+		"height": 1280
+	},
+	"color": [255, 255, 0],
+	"video_aspect_threshold": [
+	],
+	"fps": 24,
+	"duration": 16,
+	"videoclips": [
+		{
+			"name": "img_clip1-1",
+			"type": "image",
+			"url": "../output/ppt_demo1/1.jpg",
+			"duration": {
+				"begin": 0,
+				"end": 2
+			},
+			"position": [
+				{
+					"start": 0,
+					"value": "(center, center)"
+				}
+			],
+			"fx": [
+				{
+					"func": "vfx.resize",
+					"params": [{"key": "newsize", "value": "(720, 1280)"}]
+				}
+			]
+		},
+		{
+			"name": "img_clip2",
+			"type": "image",
+			"url": "../output/ppt_demo1/2.jpg",
+			"duration": {
+				"begin": 1,
+				"end": 4
+			},
+			"position": [
+				{
+					"start": 0,
+					"value": "(center, center)"
+				}
+			],
+			"fx": [
+				{
+					"func": "vfx.resize",
+					"params": [
+						{
+							"key": "newsize",
+							"value": "(720, 1280)"
+						}
+					]
+				},
+				{
+					"func": "huitu_vfx.crosscollapsein",
+					"params": [
+						{"key": "duration", "value": 1},
+						{"key": "style", "value": "block_V_in"}
+					]
+				}
+			]
+		},
+		{
+			"name": "img_clip3",
+			"type": "image",
+			"url": "../output/ppt_demo1/1.jpg",
+			"duration": {
+				"begin": 3,
+				"end": 6
+			},
+			"position": [
+				{
+					"start": 0,
+					"value": "(center, center)"
+				}
+			],
+			"fx": [
+				{
+					"func": "vfx.resize",
+					"params": [{"key": "newsize", "value": "(720, 1280)"}]
+				},
+				{
+					"func": "huitu_vfx.crosscollapsein",
+					"params": [
+						{"key": "duration", "value": 1},
+						{"key": "style", "value": "scroll_D_in"}
+					]
+				}
+			]
+		},
+		{
+			"name": "img_clip4",
+			"type": "image",
+			"url": "../output/ppt_demo1/2.jpg",
+			"duration": {
+				"begin": 5,
+				"end": 8
+			},
+			"position": [
+				{
+					"start": 0,
+					"value": "(center, center)"
+				}
+			],
+			"fx": [
+				{
+					"func": "vfx.resize",
+					"params": [
+						{
+							"key": "newsize",
+							"value": "(720, 1280)"
+						}
+					]
+				},
+				{
+					"func": "huitu_vfx.crosscollapsein",
+					"params": [
+						{"key": "duration", "value": 1},
+						{"key": "style", "value": "strip_V_in"}
+					]
+				}
+			]
+		},
+		{
+			"name": "img_clip5",
+			"type": "image",
+			"url": "../output/ppt_demo1/1.jpg",
+			"duration": {
+				"begin": 7,
+				"end": 10
+			},
+			"position": [
+				{
+					"start": 0,
+					"value": "(center, center)"
+				}
+			],
+			"fx": [
+				{
+					"func": "vfx.resize",
+					"params": [{"key": "newsize", "value": "(720, 1280)"}]
+				},
+				{
+					"func": "huitu_vfx.crosscollapsein",
+					"params": [
+						{"key": "duration", "value": 1},
+						{"key": "style", "value": "clock180"}
+					]
+				}
+			]
+		},
+		{
+			"name": "img_clip6",
+			"type": "image",
+			"url": "../output/ppt_demo1/2.jpg",
+			"duration": {
+				"begin": 9,
+				"end": 12
+			},
+			"position": [
+				{
+					"start": 0,
+					"value": "(center, center)"
+				}
+			],
+			"fx": [
+				{
+					"func": "vfx.resize",
+					"params": [
+						{
+							"key": "newsize",
+							"value": "(720, 1280)"
+						}
+					]
+				},
+				{
+					"func": "huitu_vfx.crosscollapsein",
+					"params": [
+						{"key": "duration", "value": 1},
+						{"key": "style", "value": "clock360"}
+					]
+				}
+			]
+		},
+		{
+			"name": "img_clip7",
+			"type": "image",
+			"url": "../output/ppt_demo1/1.jpg",
+			"duration": {
+				"begin": 11,
+				"end": 14
+			},
+			"position": [
+				{
+					"start": 0,
+					"value": "(center, center)"
+				}
+			],
+			"fx": [
+				{
+					"func": "vfx.resize",
+					"params": [{"key": "newsize", "value": "(720, 1280)"}]
+				},
+				{
+					"func": "huitu_vfx.crosscollapsein",
+					"params": [
+						{"key": "duration", "value": 1},
+						{"key": "style", "value": "circle_I"}
+					]
+				}
+			]
+		},
+		{
+			"name": "img_clip8",
+			"type": "image",
+			"url": "../output/ppt_demo1/2.jpg",
+			"duration": {
+				"begin": 13,
+				"end": 16
+			},
+			"position": [
+				{
+					"start": 0,
+					"value": "(center, center)"
+				}
+			],
+			"fx": [
+				{
+					"func": "vfx.resize",
+					"params": [
+						{
+							"key": "newsize",
+							"value": "(720, 1280)"
+						}
+					]
+				},
+				{
+					"func": "huitu_vfx.crosscollapsein",
+					"params": [
+						{"key": "duration", "value": 1},
+						{"key": "style", "value": "circle_O"}
+					]
+				}
+			]
+		},
+		{
+			"name": "img_clip1-2",
+			"type": "image",
+			"url": "../output/ppt_demo1/1.jpg",
+			"duration": {
+				"begin": 15,
+				"end": 16
+			},
+			"position": [
+				{
+					"start": 0,
+					"value": "(center, center)"
+				}
+			],
+			"fx": [
+				{
+					"func": "vfx.resize",
+					"params": [
+						{
+							"key": "newsize",
+							"value": "(720, 1280)"
+						}
+					]
+				},
+				{
+					"func": "huitu_vfx.crosscollapsein",
+					"params": [
+						{"key": "duration", "value": 1},
+						{"key": "style", "value": "scroll_V_in"}
+					]
+				}
+			]
+		}
+	],
+	"audioclips": [
+		{
+			"type": "audiofile",
+			"url": "../output/X-Ray Dog - Booty Shorts (Drums).mp3"
+		}
+	]
+}

@@ -1,0 +1,73 @@
+{
+	"size": {
+		"width": 720,
+		"height": 1280
+	},
+	"color": [255, 255, 0],
+	"video_aspect_threshold": [
+	],
+	"fps": 24,
+	"duration": 9,
+	"videoclips": [
+		{
+			"name": "img_clip1",
+			"type": "image",
+			"url": "../output/ppt_demo1/1.jpg",
+			"duration": {
+				"begin": 0,
+				"end": 6
+			},
+			"position": [
+				{
+					"start": 0,
+					"value": "(center, center)"
+				}
+			],
+			"fx": [
+				{
+					"func": "vfx.resize",
+					"params": [{"key": "newsize", "value": "(720, 1280)"}]
+				}
+			]
+		},
+		{
+			"name": "img_clip2",
+			"type": "image",
+			"url": "../output/ppt_demo1/2.png",
+			"duration": {
+				"begin": 3,
+				"end": 9
+			},
+			"position": [
+				{
+					"start": 0,
+					"value": "(center, center)"
+				}
+			],
+			"fx": [
+				{
+					"func": "vfx.resize",
+					"params": [
+						{
+							"key": "newsize",
+							"value": "(720, 1280)"
+						}
+					]
+				},
+				{
+					"func": "huitu_vfx.crosscollapsein",
+					"params": [
+						{"key": "duration", "value": 3},
+						{"key": "style", "value": "circle_O"}
+					]
+				}
+			]
+		}
+	],
+	"audioclips": [
+		{
+			"type": "audiofile",
+			"url": "../output/X-Ray Dog - Booty Shorts (Drums).mp3"
+		}
+	]
+}

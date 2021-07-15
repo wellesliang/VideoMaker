@@ -1,0 +1,55 @@
+{
+	"size": {
+		"width": 1280,
+		"height": 720
+	},
+	"color": [255, 255, 255],
+	"video_aspect_threshold": [
+	],
+	"fps": 24,
+	"duration": -1,
+	"videoclips": [
+		{
+            "name": "video_clip1",
+			"type": "video",
+			"url": "../output/qiuyan_xhs/03.mp4",
+			"position": [
+				{
+					"start": 0,
+					"value": "(center, center)"
+				}
+			],
+			"fx": [
+				{
+					"func": "vfx.resize",
+					"params": [{"key": "height", "value": 720}]
+				},
+				{
+					"func": "vfx.margin",
+					"params": [{"key": "mar", "value": 10, "color": "(255,255,255)"}]
+				}
+			]
+		},
+		{
+            "name": "background_img",
+			"type": "image",
+			"url": "../output/qiuyan_xhs/03.png",
+			"position": [
+				{
+					"start": 0,
+					"value": "(center, center)"
+				}
+			],
+			"fx": [
+				{
+					"func": "vfx.resize",
+					"params": [{"key": "newsize", "value": "(1280, 720)"}]
+				},
+				{
+					"func": "vfx.margin",
+					"params": [{"key": "mar", "value": 10}]
+				}
+			]
+		}
+	]
+}

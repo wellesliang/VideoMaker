@@ -1,0 +1,310 @@
+{
+	"size": {
+		"width": 720,
+		"height": 1280
+	},
+	"color": [255, 255, 0],
+	"video_aspect_threshold": [
+	],
+	"fps": 24,
+	"duration": 13,
+	"videoclips": [
+		{
+			"name": "img_clip1",
+			"type": "image",
+			"url": "../output/fast_flash_demo1/black.jpg",
+			"duration": {
+				"begin": 0,
+				"end": 1
+			},
+			"position": [
+				{
+					"start": 0,
+					"value": "(center, center)"
+				}
+			],
+			"fx": [
+				{
+					"func": "vfx.resize",
+					"params": [{"key": "newsize", "value": "(720, 1280)"}]
+				},
+				{
+					"func": "huitu_vfx.typing",
+					"params": [
+						{"key": "speed", "value": 0.12},
+						{"key": "text", "value": "装修房子"},
+						{"key": "font", "value": "PingFang Bold"},
+						{"key": "size", "value": 150},
+						{"key": "color", "value": "(255, 255, 255)"},
+						{"key": "pos", "value": "(100, 580)"}
+						]
+				}
+			]
+		},
+		{
+			"name": "img_clip2",
+			"type": "image",
+			"url": "../output/fast_flash_demo1/black.jpg",
+			"duration": {
+				"begin": 1,
+				"end": 2
+			},
+			"position": [
+				{
+					"start": 0,
+					"value": "(center, center)"
+				}
+			],
+			"fx": [
+				{
+					"func": "vfx.resize",
+					"params": [{"key": "newsize", "value": "(720, 1280)"}]
+				},
+				{
+					"func": "huitu_vfx.typing",
+					"params": [
+						{"key": "speed", "value": 0.12},
+						{"key": "text", "value": "究竟什么"},
+						{"key": "font", "value": "PingFang Bold"},
+						{"key": "size", "value": 150},
+						{"key": "color", "value": "(255, 255, 255)"},
+						{"key": "pos", "value": "(360, 640)"},
+						{"key": "paddle", "value": "center"}
+						]
+				}
+			]
+		},
+		{
+			"name": "img_clip3",
+			"type": "image",
+			"url": "../output/fast_flash_demo1/3.jpg",
+			"duration": {
+				"begin": 2,
+				"end": 3
+			},
+			"position": [
+				{
+					"start": 0,
+					"value": "(center, center)"
+				}
+			],
+			"fx": [
+				{
+					"func": "vfx.resize",
+					"params": [{"key": "newsize", "value": "(720, 1280)"}]
+				},
+				{
+					"func": "huitu_vfx.blink",
+					"params": [{"key": "duration", "value": 0.10}]
+				}
+			]
+		},
+		{
+			"name": "img_clip4",
+			"type": "image",
+			"url": "../output/fast_flash_demo1/4.jpg",
+			"duration": {
+				"begin": 3,
+				"end": 4
+			},
+			"position": [
+				{
+					"start": 0,
+					"value": "(center, center)"
+				}
+			],
+			"fx": [
+				{
+					"func": "vfx.resize",
+					"params": [{"key": "newsize", "value": "(720, 1280)"}]
+				}
+			]
+		},
+		{
+			"name": "img_clip5",
+			"type": "image",
+			"url": "../output/fast_flash_demo1/5.jpg",
+			"duration": {
+				"begin": 4,
+				"end": 5.5
+			},
+			"position": [
+				{
+					"start": 0,
+					"value": "(center, center)"
+				}
+			],
+			"fx": [
+				{
+					"func": "vfx.resize",
+					"params": [{"key": "newsize", "value": "(720, 1280)"}]
+				},
+				{
+					"func": "huitu_vfx.phantom1",
+					"params": []
+				}
+			]
+		},
+		{
+			"name": "img_clip6",
+			"type": "image",
+			"url": "../output/fast_flash_demo1/6.jpg",
+			"duration": {
+				"begin": 5.5,
+				"end": 7
+			},
+			"position": [
+				{
+					"start": 0,
+					"value": "(center, center)"
+				}
+			],
+			"fx": [
+				{
+					"func": "vfx.resize",
+					"params": [{"key": "newsize", "value": "(720, 1280)"}]
+				},
+				{
+					"func": "huitu_vfx.phantom2",
+					"params": []
+				}
+			]
+		},
+		{
+			"name": "img_clip7",
+			"type": "image",
+			"url": "../output/fast_flash_demo1/7.jpg",
+			"duration": {
+				"begin": 7,
+				"end": 8
+			},
+			"position": [
+				{
+					"start": 0,
+					"value": "(center, center)"
+				}
+			],
+			"fx": [
+				{
+					"func": "vfx.resize",
+					"params": [{"key": "newsize", "value": "(720, 1280)"}]
+				}
+			]
+		},
+		{
+			"name": "img_clip8",
+			"type": "image",
+			"url": "../output/fast_flash_demo1/8.jpg",
+			"duration": {
+				"begin": 8,
+				"end": 9
+			},
+			"position": [
+				{
+					"start": 0,
+					"value": "(center, center)"
+				}
+			],
+			"fx": [
+				{
+					"func": "vfx.resize",
+					"params": [{"key": "newsize", "value": "(720, 1280)"}]
+				},
+				{
+					"func": "huitu_vfx.blink",
+					"params": [{"key": "duration", "value": 0.10}]
+				}
+			]
+		},
+		{
+			"name": "img_clip9",
+			"type": "image",
+			"url": "../output/fast_flash_demo1/9.jpg",
+			"duration": {
+				"begin": 9,
+				"end": 10
+			},
+			"position": [
+				{
+					"start": 0,
+					"value": "(center, center)"
+				}
+			],
+			"fx": [
+				{
+					"func": "vfx.resize",
+					"params": [{"key": "newsize", "value": "(720, 1280)"}]
+				}
+			]
+		},
+		{
+			"name": "img_clip10",
+			"type": "image",
+			"url": "../output/fast_flash_demo1/10.jpg",
+			"duration": {
+				"begin": 10,
+				"end": 11
+			},
+			"position": [
+				{
+					"start": 0,
+					"value": "(center, center)"
+				}
+			],
+			"fx": [
+				{
+					"func": "vfx.resize",
+					"params": [{"key": "newsize", "value": "(720, 1280)"}]
+				}
+			]
+		},
+		{
+			"name": "img_clip11",
+			"type": "image",
+			"url": "../output/fast_flash_demo1/11.jpg",
+			"duration": {
+				"begin": 11,
+				"end": 12
+			},
+			"position": [
+				{
+					"start": 0,
+					"value": "(center, center)"
+				}
+			],
+			"fx": [
+				{
+					"func": "vfx.resize",
+					"params": [{"key": "newsize", "value": "(720, 1280)"}]
+				}
+			]
+		},
+		{
+			"name": "img_clip12",
+			"type": "image",
+			"url": "../output/fast_flash_demo1/12.jpg",
+			"duration": {
+				"begin": 12,
+				"end": 13
+			},
+			"position": [
+				{
+					"start": 0,
+					"value": "(center, center)"
+				}
+			],
+			"fx": [
+				{
+					"func": "vfx.resize",
+					"params": [{"key": "newsize", "value": "(720, 1280)"}]
+				}
+			]
+		}
+	],
+	"audioclips": [
+		{
+			"type": "audiofile",
+			"url": "../output/X-Ray Dog - Booty Shorts (Drums).mp3"
+		}
+	]
+}
