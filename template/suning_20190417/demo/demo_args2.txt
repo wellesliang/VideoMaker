@@ -1,0 +1,7 @@
+ARG_pid	3286091672
+ARG_image_1	http://ms.bdimg.com/dsp-image/1922193858.jpg
+ARG_image_2	http://ms.bdimg.com/dsp-image/2436484752.jpg
+ARG_image_3	http://ms.bdimg.com/dsp-image/2218566570.jpg
+ARG_image_4	http://ms.bdimg.com/dsp-image/2218566604.jpg
+ARG_image_5	http://ms.bdimg.com/dsp-image/2218566652.jpg
+ARG_title_1	主妇精准把握火候的秘密，选对燃气灶！

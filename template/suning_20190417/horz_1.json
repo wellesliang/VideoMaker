@@ -1,0 +1,147 @@
+{
+    "size": {
+        "width": 1280,
+        "height": 720
+    },
+    "color": [0, 0, 0],
+    "video_aspect_threshold": [
+    ],
+    "fps": 24,
+    "duration": -1,
+    "videoclips": [
+        {
+            "name": "img_clip1",
+            "type": "image_nomask",
+            "url": "__ARG_image_1__",
+            "duration": {
+                "begin": 0,
+                "duration": 4
+            },
+            "position": [
+                {
+                    "start": 0,
+                    "value": "(center, center)"
+                }
+            ],
+            "fx": [
+                {
+                    "func": "huitu_vfx.resize_overlap_blur",
+                    "params": [
+                        {"key": "width", "value": 1280},
+                        {"key": "height", "value": 720},
+                        {"key": "edge", "value": "height"},
+                        {"key": "size", "value": 720}
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "img_clip2",
+            "type": "image_nomask",
+            "url": "__ARG_image_2__",
+            "duration": {
+                "begin": "last_end",
+                "delta": -1,
+                "duration": 5
+            },
+            "position": [
+                {
+                    "start": 0,
+                    "value": "(center, center)"
+                }
+            ],
+            "fx": [
+                {
+                    "func": "huitu_vfx.resize_overlap_blur",
+                    "params": [
+                        {"key": "width", "value": 1280},
+                        {"key": "height", "value": 720},
+                        {"key": "edge", "value": "height"},
+                        {"key": "size", "value": 720}
+                    ]
+                },
+				{
+					"func": "huitu_vfx.crosscollapsein",
+					"params": [
+						{"key": "duration", "value": 1},
+						{"key": "style", "value": "__ARG_fade_1__"}
+					]
+				}
+            ]
+        },
+        {
+            "name": "img_clip3",
+            "type": "image_nomask",
+            "url": "__ARG_image_3__",
+            "duration": {
+                "begin": "last_end",
+                "delta": -1,
+                "duration": 5
+            },
+            "position": [
+                {
+                    "start": 0,
+                    "value": "(center, center)"
+                }
+            ],
+            "fx": [
+                {
+                    "func": "huitu_vfx.resize_overlap_blur",
+                    "params": [
+                        {"key": "width", "value": 1280},
+                        {"key": "height", "value": 720},
+                        {"key": "edge", "value": "height"},
+                        {"key": "size", "value": 720}
+                    ]
+                },
+				{
+					"func": "huitu_vfx.crosscollapsein",
+					"params": [
+						{"key": "duration", "value": 1},
+						{"key": "style", "value": "__ARG_fade_2__"}
+					]
+				}
+            ]
+        },
+        {
+            "name": "img_clip4",
+            "type": "image_nomask",
+            "url": "__ARG_image_4__",
+            "duration": {
+                "begin": "last_end",
+                "delta": -1,
+                "duration": 4
+            },
+            "position": [
+                {
+                    "start": 0,
+                    "value": "(center, center)"
+                }
+            ],
+            "fx": [
+                {
+                    "func": "huitu_vfx.resize_overlap_blur",
+                    "params": [
+                        {"key": "width", "value": 1280},
+                        {"key": "height", "value": 720},
+                        {"key": "edge", "value": "height"},
+                        {"key": "size", "value": 720}
+                    ]
+                },
+				{
+					"func": "huitu_vfx.crosscollapsein",
+					"params": [
+						{"key": "duration", "value": 1},
+						{"key": "style", "value": "__ARG_fade_3__"}
+					]
+				}
+            ]
+        }
+    ],
+    "audioclips": [
+        {
+            "type": "audiofile",
+            "url": "__ARG_music_1__"
+        }
+    ]
+}
