@@ -1,9 +1,4 @@
 # -*- coding: utf-8 -*-
-################################################################################
-#
-# Copyright (c) 2014 Baidu.com, Inc. All Rights Reserved
-#
-################################################################################
 
 """
 video maker
@@ -19,12 +14,10 @@ import numpy as np
 import math
 import cv2 as cv
 from utils import text_utils
-from utils import bos_conf
 from utils import image_utils
 
 import moviepy.editor as mpy
 import moviepy.video.fx.all as vfx
-# from baidubce.services.bos.bos_client import BosClient
 
 
 SCROLL_IN_TIME = 2.0

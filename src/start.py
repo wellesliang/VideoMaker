@@ -1,9 +1,4 @@
 # -*- coding: utf-8 -*-
-################################################################################
-#
-# Copyright (c) 2014 Baidu.com, Inc. All Rights Reserved
-#
-################################################################################
 """
 Authors: liangweiming(liangweiming@baidu.com)
 Date:    2018/06/21 11:55:06
@@ -12,8 +7,7 @@ Date:    2018/06/21 11:55:06
 import sys
 import video_template
 import video_compositer
-# from utils import bos_conf
-# from baidubce.services.bos.bos_client import BosClient
+
 
 if __name__ == '__main__':
     vc = video_compositer.VideoCompositer('thread1')

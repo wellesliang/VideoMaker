@@ -1,9 +1,4 @@
 # -*- coding: utf-8 -*-
-################################################################################
-#
-# Copyright (c) 2014 Baidu.com, Inc. All Rights Reserved
-#
-################################################################################
 
 """
 get commedity information, such as catogory, name, image, ...
