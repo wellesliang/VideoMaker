@@ -1,0 +1,163 @@
+{
+    "size": {
+        "width": 1280,
+        "height": 720
+    },
+    "color": [0, 0, 0],
+    "video_aspect_threshold": [
+    ],
+    "fps": 24,
+    "duration": -1,
+    "videoclips": [
+        {
+            "name": "img_clip1",
+            "type": "image",
+            "url": "__ARG_image_1__",
+            "duration": {
+                "begin": 0,
+                "duration": 5
+            },
+            "position": [
+                {
+                    "start": 0,
+                    "value": "(center, center)"
+                }
+            ],
+            "fx": [
+                {
+                    "func": "huitu_vfx.resize_overlap_blur",
+                    "params": [
+                        {"key": "width", "value": 1280},
+                        {"key": "height", "value": 720},
+                        {"key": "edge", "value": "height"},
+                        {"key": "size", "value": 720}
+                    ]
+                },
+                {
+                    "func": "huitu_vfx.highlight",
+                    "params": [
+                        {"key": "begin", "value": 1.5},
+                        {"key": "end", "value": 5.0},
+                        {"key": "anchor", "value": "A-left"},
+                        {"key": "highlight", "value": 1.15},
+                        {"key": "resize", "value": 1.2},
+                        {"key": "win_len", "value": 420}
+                    ]
+                },
+                {
+                    "func": "huitu_vfx.highlight",
+                    "params": [
+                        {"key": "begin", "value": 0.5},
+                        {"key": "end", "value": 4.0},
+                        {"key": "anchor", "value": "A-right"},
+                        {"key": "highlight", "value": 1.30},
+                        {"key": "resize", "value": 1.1},
+                        {"key": "win_len", "value": 420}
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "img_clip2",
+            "type": "image",
+            "url": "__ARG_image_2__",
+            "duration": {
+                "begin": "last_end",
+                "duration": 5
+            },
+            "position": [
+                {
+                    "start": 0,
+                    "value": "(center, center)"
+                }
+            ],
+            "fx": [
+                {
+                    "func": "huitu_vfx.resize_overlap_blur",
+                    "params": [
+                        {"key": "width", "value": 1280},
+                        {"key": "height", "value": 720},
+                        {"key": "edge", "value": "height"},
+                        {"key": "size", "value": 720}
+                    ]
+                },
+                {
+                    "func": "huitu_vfx.highlight",
+                    "params": [
+                        {"key": "begin", "value": 0.5},
+                        {"key": "end", "value": 4.0},
+                        {"key": "anchor", "value": "B-left"},
+                        {"key": "highlight", "value": 1.15},
+                        {"key": "resize", "value": 1.2},
+                        {"key": "win_len", "value": 420}
+                    ]
+                },
+                {
+                    "func": "huitu_vfx.highlight",
+                    "params": [
+                        {"key": "begin", "value": 1.5},
+                        {"key": "end", "value": 5.0},
+                        {"key": "anchor", "value": "B-right"},
+                        {"key": "highlight", "value": 1.30},
+                        {"key": "resize", "value": 1.1},
+                        {"key": "win_len", "value": 420}
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "img_clip3",
+            "type": "image",
+            "url": "__ARG_image_3__",
+            "duration": {
+                "begin": "last_end",
+                "duration": 5
+            },
+            "position": [
+                {
+                    "start": 0,
+                    "value": "(center, center)"
+                }
+            ],
+            "fx": [
+                {
+                    "func": "huitu_vfx.resize_overlap_blur",
+                    "params": [
+                        {"key": "width", "value": 1280},
+                        {"key": "height", "value": 720},
+                        {"key": "edge", "value": "height"},
+                        {"key": "size", "value": 720}
+                    ]
+                },
+                {
+                    "func": "huitu_vfx.highlight",
+                    "params": [
+                        {"key": "begin", "value": 1.5},
+                        {"key": "end", "value": 5.0},
+                        {"key": "anchor", "value": "A-left"},
+                        {"key": "highlight", "value": 1.15},
+                        {"key": "resize", "value": 1.2},
+                        {"key": "win_len", "value": 420}
+                    ]
+                },
+                {
+                    "func": "huitu_vfx.highlight",
+                    "params": [
+                        {"key": "begin", "value": 0.5},
+                        {"key": "end", "value": 4.0},
+                        {"key": "anchor", "value": "A-right"},
+                        {"key": "highlight", "value": 1.30},
+                        {"key": "resize", "value": 1.1},
+                        {"key": "win_len", "value": 420}
+                    ]
+                }
+            ]
+        }
+    ],
+    "audioclips": [
+        {
+            "type": "audiofile",
+            "url": "__ARG_music_1__"
+        }
+    ]
+}

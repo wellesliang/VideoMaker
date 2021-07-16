@@ -1,0 +1,43 @@
+{
+	"size": {
+		"width": 1280,
+		"height": 1088
+	},
+	"color": [255, 255, 255],
+	"video_aspect_threshold": [
+	],
+	"fps": 36,
+	"duration": -1,
+	"videoclips": [
+		{
+            "name": "video_clip1",
+			"type": "video",
+			"url": "../output/junjie_jd_shouji/v.f30.mp4",
+			"position": [
+				{
+					"start": 0,
+					"value": "(0, 0)"
+				}
+			],
+			"fx": [
+				{
+					"func": "huitu_vfx.hist_equalization",
+					"params": []
+				}
+			]
+		},
+		{
+            "name": "video_clip2",
+			"type": "video",
+			"url": "../output/junjie_jd_shouji/v.f30.mp4",
+			"position": [
+				{
+					"start": 0,
+					"value": "(0, 544)"
+				}
+			],
+			"fx": [
+			]
+		}
+	]
+}

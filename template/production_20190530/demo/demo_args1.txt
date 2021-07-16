@@ -1,0 +1,8 @@
+ARG_pid	1328399270
+ARG_size	vert
+ARG_image_1	../template/production_20190530/demo/1.jpg
+ARG_image_2	../template/production_20190530/demo/2.jpg
+ARG_image_3	../template/production_20190530/demo/3.jpg
+ARG_image_4	../template/production_20190530/demo/4.jpg
+ARG_title	无线蓝牙组合音响便携桌面HIFI卧室音箱香槟金
+ARG_brand	雅马哈

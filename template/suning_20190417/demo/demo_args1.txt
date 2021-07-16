@@ -1,0 +1,7 @@
+ARG_pid	1328399270
+ARG_image_1	http://10.191.104.40/dsp-image/1579731987.jpg
+ARG_image_2	http://10.191.104.40/dsp-image/1579731975.jpg
+ARG_image_3	http://10.191.104.40/dsp-image/1579731978.jpg
+ARG_image_4	http://10.191.104.40/dsp-image/1579731987.jpg
+ARG_image_5	http://10.191.104.40/dsp-image/1782900553.jpg
+ARG_title_1	Yamaha/雅马哈 LSX-70 无线蓝牙组合音响便携桌面HIFI卧室音箱香槟金

@@ -1,0 +1,61 @@
+{
+	"size": {
+		"width": 720,
+		"height": 1280
+	},
+	"color": [255, 255, 255],
+	"video_aspect_threshold": [
+	],
+	"fps": 24,
+	"duration": 15,
+	"videoclips": [
+		{
+            "name": "img_clip1",
+			"type": "video",
+			"url": "../output/hangkong.mp4",
+			"duration": {
+				"begin": 0,
+				"end": 15
+			},
+			"position": [
+				{
+					"start": 0,
+					"value": "(center, center)"
+				}
+			],
+			"fx": [
+				{
+					"func": "vfx.mirror_x"
+				},
+				{
+					"func": "huitu_vfx.blur"
+				},
+				{
+					"func": "vfx.resize",
+					"params": [{"key": "height", "value": 1180}]
+				}
+			]
+		},
+		{
+            "name": "video_clip1",
+			"type": "video",
+			"url": "../output/hangkong.mp4",
+			"position": [
+				{
+					"start": 0,
+					"value": "(center, center)"
+				}
+			],
+			"fx": [
+				{
+					"func": "vfx.resize",
+					"params": [{"key": "width", "value": 720}]
+				},
+				{
+					"func": "vfx.margin",
+					"params": [{"key": "mar", "value": 10}]
+				}
+			]
+		}
+	]
+}

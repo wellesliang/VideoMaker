@@ -1,0 +1,25 @@
+横版 原视频
+python start_render.py jd_hudiejie/horz_1.json
+ARG_video_1	http://ms.bdimg.com/dsp-image/2033366944.mp4
+ARG_title_1	迪奥（Dior）烈艳蓝金女士唇膏滋润款保湿显色口红
+
+横版 合成视频
+python start_render.py jd_hudiejie/horz_2.json
+ARG_image_1	http://ms.bdimg.com/dsp-image/2045169265.jpg
+ARG_image_2	http://ms.bdimg.com/dsp-image/2045169282.jpg
+ARG_image_3	http://ms.bdimg.com/dsp-image/2045169274.jpg
+ARG_image_4	http://ms.bdimg.com/dsp-image/2045169284.jpg
+ARG_title_1	迪奥（Dior）烈艳蓝金女士唇膏滋润款保湿显色口红
+
+竖版 原视频
+python start_render.py jd_hudiejie/vert_1.json
+ARG_video_1	http://ms.bdimg.com/dsp-image/2033366944.mp4
+ARG_title_1	迪奥（Dior）烈艳蓝金女士唇膏滋润款保湿显色口红
+
+竖版 合成视频
+python start_render.py jd_hudiejie/vert_2.json
+ARG_image_1	http://ms.bdimg.com/dsp-image/2045169265.jpg
+ARG_image_2	http://ms.bdimg.com/dsp-image/2045169282.jpg
+ARG_image_3	http://ms.bdimg.com/dsp-image/2045169274.jpg
+ARG_image_4	http://ms.bdimg.com/dsp-image/2045169284.jpg
+ARG_title_1	迪奥（Dior）烈艳蓝金女士唇膏滋润款保湿显色口红

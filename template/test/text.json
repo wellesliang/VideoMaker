@@ -1,0 +1,179 @@
+{
+	"size": {
+		"width": 720,
+		"height": 1180
+	},
+	"color": [0, 0, 0],
+	"video_aspect_threshold": [
+	],
+	"fps": 24,
+	"duration": 15,
+	"videoclips": [
+		{
+			"name": "text_as_image1",
+			"type": "text",
+			"url": "",
+			"text": "超清全面屏设计",
+			"font": "PingFang Bold",
+			"size": 60,
+			"color": [255, 255, 255],
+			"duration": {
+				"begin": 0,
+				"end": 8
+			},
+			"position": [
+				{
+					"start": 0,
+					"value": "(center, center)"
+				},
+				{
+					"start": 2,
+					"value": "movement.linear(360, 590, 360, 200, 5)",
+					"paddle": "center"
+				}
+			],
+			"fx": [
+				{
+					"func": "vfx.resize",
+					"params": [
+						{"key": "newsize", "value": "lambda t: max(7.0 - t * 4.0, 1.5)"}
+					]
+				},
+				{
+					"func": "vfx.crossfadeout",
+					"params" : [
+						{"key": "duration", "value": 1}
+					]
+				},
+				{
+					"func": "vfx.crossfadein",
+					"params" : [
+						{"key": "duration", "value": 1}
+					]
+				}
+			]
+		},
+		{
+			"name": "text_as_image1",
+			"type": "text",
+			"url": "",
+			"text": "齐刘海潮流设计",
+			"font": "PingFang Bold",
+			"size": 60,
+			"color": [255, 255, 255],
+			"duration": {
+				"begin": 2.5,
+				"end": 10.5
+			},
+			"position": [
+				{
+					"start": 0,
+					"value": "(center, center)"
+				},
+				{
+					"start": 2,
+					"value": "movement.linear(360, 590, 360, 200, 5)",
+					"paddle": "center"
+				}
+			],
+			"fx": [
+				{
+					"func": "vfx.resize",
+					"params": [
+						{"key": "newsize", "value": "lambda t: max((7.0 - 0.9 * int(t / 0.15)), 1.0)"}
+					]
+				},
+				{
+					"func": "vfx.crossfadeout",
+					"params" : [
+						{"key": "duration", "value": 1}
+					]
+				},
+				{
+					"func": "vfx.crossfadein",
+					"params" : [
+						{"key": "duration", "value": 1}
+					]
+				}
+			]
+		},
+		{
+			"name": "text_as_image1",
+			"type": "text",
+			"url": "",
+			"text": "莱卡三摄后置摄像头",
+			"font": "simfang",
+			"size": 60,
+			"color": [255, 255, 255],
+			"duration": {
+				"begin": 5.0,
+				"end": 13.0
+			},
+			"position": [
+				{
+					"start": 0,
+					"value": "movement.vortex_in(360, 590, 7, 10)",
+					"paddle": "center"
+				},
+				{
+					"start": 3.0,
+					"value": "movement.linear(360, 590, 360, 200, 4.0)",
+					"paddle": "center"
+				}
+			],
+			"fx": [
+				{
+					"func": "vfx.crossfadeout",
+					"params" : [
+						{"key": "duration", "value": 1}
+					]
+				},
+				{
+					"func": "vfx.crossfadein",
+					"params" : [
+						{"key": "duration", "value": 1}
+					]
+				}
+			]
+		},
+		{
+			"name": "text_as_image1",
+			"type": "text",
+			"url": "",
+			"text": "正品低价，品质保障",
+			"font": "simfang",
+			"size": 60,
+			"color": [255, 255, 255],
+			"duration": {
+				"begin": 7.5,
+				"end": 15.5
+			},
+			"position": [
+				{
+					"start": 0,
+					"value": "movement.cascade(-300, 590, 360, 590)",
+					"paddle": "center"
+				},
+				{
+					"start": 3.0,
+					"value": "movement.linear(360, 590, 360, 200, 4.0)",
+					"paddle": "center"
+				}
+			],
+			"fx": [
+				{
+					"func": "vfx.crossfadeout",
+					"params" : [
+						{"key": "duration", "value": 1}
+					]
+				},
+				{
+					"func": "vfx.crossfadein",
+					"params" : [
+						{"key": "duration", "value": 1}
+					]
+				}
+			]
+		}
+	]
+}

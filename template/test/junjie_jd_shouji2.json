@@ -1,0 +1,48 @@
+{
+	"size": {
+		"width": 640,
+		"height": 1140
+	},
+	"color": [0, 0, 0],
+	"video_aspect_threshold": [
+	],
+	"fps": 24,
+	"duration": -1,
+	"videoclips": [
+		{
+            "name": "img_clip1",
+			"type": "image",
+			"url": "../output/junjie_jd_shouji/dfv2.png",
+			"position": [
+				{
+					"start": 0,
+					"value": "(260, 920)",
+					"paddle": "center"
+				}
+			],
+			"fx": [
+				{
+					"func": "vfx.resize",
+					"params": [{"key": "width", "value": 420}]
+				}
+			]
+		},
+		{
+            "name": "video_clip1",
+			"type": "video",
+			"url": "../output/junjie_jd_shouji/v.f30.mp4",
+			"position": [
+				{
+					"start": 0,
+					"value": "(center, center)"
+				}
+			],
+			"fx": [
+				{
+					"func": "vfx.resize",
+					"params": [{"key": "width", "value": 800}]
+				}
+			]
+		}
+	]
+}

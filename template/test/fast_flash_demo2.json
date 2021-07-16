@@ -1,0 +1,57 @@
+{
+	"size": {
+		"width": 720,
+		"height": 1280
+	},
+	"color": [0, 0, 0],
+	"video_aspect_threshold": [
+	],
+	"fps": 24,
+	"duration": 6,
+	"videoclips": [
+		{
+			"name": "img_clip1",
+			"type": "text",
+			"text": "decel",
+			"size": 120,
+			"color": [255, 255, 255],
+			"font": "PingFang Bold",
+			"url": "",
+			"duration": {
+				"begin": 0,
+				"end": 3
+			},
+			"position": [
+				{
+					"start": 0,
+					"value": "movement.decel(360, 0, 360, 640, 3)",
+					"paddle": "center"
+				}
+			],
+			"fx": [
+			]
+		},
+		{
+			"name": "img_clip1",
+			"type": "text",
+			"text": "accel",
+			"size": 120,
+			"color": [255, 255, 255],
+			"font": "PingFang Bold",
+			"url": "",
+			"duration": {
+				"begin": 3,
+				"end": 6
+			},
+			"position": [
+				{
+					"start": 0,
+					"value": "movement.accel(360, 640, 360, 1400, 3)",
+					"paddle": "center"
+				}
+			],
+			"fx": [
+			]
+		}
+	]
+}

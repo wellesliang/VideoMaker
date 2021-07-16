@@ -1,0 +1,181 @@
+{
+    "size": {
+        "width": 720,
+        "height": 1280
+    },
+    "color": [0, 0, 0],
+    "video_aspect_threshold": [
+    ],
+    "fps": 24,
+    "duration": -1,
+    "videoclips": [
+        {
+            "name": "img_clip1",
+            "type": "image",
+            "url": "__ARG_image_1__",
+            "duration": {
+                "begin": 0,
+                "duration": 4
+            },
+            "position": [
+                {
+                    "start": 0,
+                    "value": "(center, center)"
+                },
+              {
+                    "start": 3,
+                    "value": "movement.accel(360, 640, -360, 640, 1.0)",
+                    "paddle": "center"
+                }
+            ],
+            "fx": [
+                {
+                    "func": "huitu_vfx.resize_overlap_blur",
+                    "params": [
+                        {"key": "width", "value": 720},
+                        {"key": "height", "value": 1280},
+                        {"key": "edge", "value": "width"},
+                        {"key": "size", "value": 720}
+                    ]
+                },
+                {
+                    "func": "vfx.resize",
+                    "params": [{"key": "newsize", "value": "lambda t:(720,1280) if t<=1.0 else ((1.0+(t-1.0)*0.025)*720,(1.0+(t-1.0)*0.025)*1280)"}]
+                }
+            ]
+        },
+        {
+            "name": "img_clip2",
+            "type": "image",
+            "url": "__ARG_image_2__",
+            "duration": {
+                "begin": "last_end",
+                "delta": -1,
+                "duration": 5
+            },
+            "position": [
+                {
+                    "start": 0,
+                    "value": "movement.accel(1080, 640, 360, 640, 1.0)",
+                    "paddle": "center"
+                },
+                {
+                    "start": 4,
+                    "value": "movement.cascade(360, 640, 360, -640, 1.0)",
+                    "paddle": "center"
+                }
+            ],
+            "fx": [
+                {
+                    "func": "huitu_vfx.resize_overlap_blur",
+                    "params": [
+                        {"key": "width", "value": 720},
+                        {"key": "height", "value": 1280},
+                        {"key": "edge", "value": "width"},
+                        {"key": "size", "value": 720}
+                    ]
+                },
+                {
+                    "func": "vfx.resize",
+                    "params": [{"key": "newsize", "value": "lambda t:((t*0.1+1.0)*720,(t*0.1+1.0)*1280) if t<=1.0 else ((1.1-(t-1.0)*0.025)*720,(1.1-(t-1.0)*0.025)*1280)"}]
+                }
+            ]
+        },
+        {
+            "name": "img_clip3",
+            "type": "image",
+            "url": "__ARG_image_3__",
+            "duration": {
+                "begin": "last_end",
+                "delta": -1,
+                "duration": 5
+            },
+            "position": [
+                {
+                    "start": 0,
+                    "value": "movement.cascade(360, 1920, 360, 640, 1.0)",
+                    "paddle": "center"
+                },
+                {
+                    "start": 4,
+                    "value": "movement.cascade(360, 640, 360, 1920, 1.0)",
+                    "paddle": "center"
+                }
+            ],
+            "fx": [
+                {
+                    "func": "huitu_vfx.resize_overlap_blur",
+                    "params": [
+                        {"key": "width", "value": 720},
+                        {"key": "height", "value": 1280},
+                        {"key": "edge", "value": "width"},
+                        {"key": "size", "value": 720}
+                    ]
+                },
+                {
+                    "func": "vfx.resize",
+                    "params": [{"key": "newsize", "value": "lambda t:(720,1280) if t<=1.0 else ((1.0+(t-1.0)*0.025)*720,(1.0+(t-1.0)*0.025)*1280)"}]
+                }
+            ]
+        },
+        {
+            "name": "img_clip4",
+            "type": "image",
+            "url": "__ARG_image_4__",
+            "duration": {
+                "begin": "last_end",
+                "delta": -1,
+                "duration": 4
+            },
+            "position": [
+               {
+                    "start": 0,
+                    "value": "movement.cascade(360, -640, 360, 640, 1.0)",
+                    "paddle": "center"
+                }
+            ],
+            "fx": [
+                {
+                    "func": "huitu_vfx.resize_overlap_blur",
+                    "params": [
+                        {"key": "width", "value": 720},
+                        {"key": "height", "value": 1280},
+                        {"key": "edge", "value": "width"},
+                        {"key": "size", "value": 720}
+                    ]
+                },
+                {
+                    "func": "vfx.resize",
+                    "params": [{"key": "newsize", "value": "lambda t:((t*0.1+1.0)*720,(t*0.1+1.0)*1280) if t<=1.0 else ((1.1-(t-1.0)*0.025)*720,(1.1-(t-1.0)*0.025)*1280)"}]
+                }
+            ]
+        },
+        {
+            "name": "img_ending",
+            "type": "image",
+            "url": "../template/suning_20190417/suning_vert_ending.png",
+            "position": [
+            {
+                "start": 0,
+                "value": "(0, 0)"
+            }
+            ],
+            "duration": {
+                "begin": "last_end",
+                "duration": 3
+            },
+            "fx": [
+            {
+                "func": "vfx.resize",
+                "params": [{"key": "newsize", "value": "(720, 1280)"}]
+            }
+            ]
+        }
+    ],
+    "audioclips": [
+        {
+            "type": "audiofile",
+            "url": "__ARG_music_1__"
+        }
+    ]
+}
