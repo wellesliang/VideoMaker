@@ -77,5 +77,5 @@ if __name__ == '__main__':
     pt = (0, 5)
     p = (0, 0)
     q = (10, 10)
-    print distance_pt_seg(pt, p, q)
+    print(distance_pt_seg(pt, p, q))
 

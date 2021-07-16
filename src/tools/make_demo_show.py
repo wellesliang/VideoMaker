@@ -15,14 +15,12 @@ import os
 import sys
 sys.path.append('../')
 from utils import bos_conf
-from baidubce.services.bos.bos_client import BosClient
 
 
 if __name__ == '__main__':
     root_dir = '../../demo'
     dir_list = [root_dir]
     file_list = []
-    bos_client = BosClient(bos_conf.config)
     idx = 0
     cate_name = {'huitu_fade': '换场动画',
                  'huitu_vfx': "特效",
@@ -39,11 +37,11 @@ if __name__ == '__main__':
             else:
                 file_list.append(cur_path)
 
-    prefix = 'http://bos.qasandbox.bcetest.baidu.com/pa-test/'
     name_url = {}
     for fname in file_list:
         show_name = fname[len(root_dir) + 1:]
-        bos_client.put_object_from_file('pa-test', show_name, fname)
+        # prepare prefix
+        prefix = 'to be continue'
         show_url = prefix + show_name
         name_url[show_name] = show_url
 

@@ -11,11 +11,9 @@ Date:    2018/06/21 11:55:06
 
 import re
 import os
-import sys
 import csv
 import random
 import yaml
-import traceback
 import video_template
 import video_compositer
 
@@ -80,20 +78,21 @@ def get_template_args(str):
     return all_pats
 
 
-def load_item_from_file(filename, filter):
+def load_item_from_file(filenames, filter):
     items = []
-    with open(filename, encoding='utf-8-sig') as f:
-        for row in csv.DictReader(f):
-            if 'image_num' in filter and len(row['PICTURE_URL'].split(';')) < filter['image_num']:
-                continue
-            item = {'item_id': row['item_id'],
-                    'title': row['AUCT_TITL'],
-                    'first': row['META_CATEG_NAME'],
-                    'second': row['CATEG_LVL2_NAME'],
-                    'third': row['CATEG_LVL3_NAME']}
-            for i, url in enumerate(row['PICTURE_URL'].split(';')):
-                item[f'image{i+1}'] = url
-            items.append(item)
+    for filename in filenames:
+        with open(filename, encoding='utf-8-sig') as f:
+            for row in csv.DictReader(f):
+                if 'image_num' in filter and len(row['PICTURE_URL'].split(';')) < filter['image_num']:
+                    continue
+                item = {'item_id': row['item_id'],
+                        'title': row['AUCT_TITL'],
+                        'first': row['META_CATEG_NAME'],
+                        'second': row['CATEG_LVL2_NAME'],
+                        'third': row['CATEG_LVL3_NAME']}
+                for i, url in enumerate(row['PICTURE_URL'].split(';')):
+                    item[f'image{i+1}'] = url
+                items.append(item)
     return items
 
 
@@ -101,11 +100,12 @@ def load_item_from_demo(demo):
     return demo
 
 
-def load_item(conf, return_num = 1):
-    if 'item' in conf and 'path' in conf['item']:
-        items = load_item_from_file(conf['item']['path'], conf['item'])
-    else:
+def load_item(conf, return_num=1):
+    if 'demo' in conf and 'used' in conf['demo'] and conf['demo']['used'] is True:
         items = [load_item_from_demo(conf['demo'])]
+    else:
+        items = load_item_from_file(conf['item']['path'], conf['item'])
+
     random.shuffle(items)
     return items[0: return_num]
 

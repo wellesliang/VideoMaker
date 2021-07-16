@@ -23,9 +23,6 @@ import pickle
 import moviepy.editor as mpy
 from tools.flow import Flow
 
-from utils import bos_conf
-from baidubce.services.bos.bos_client import BosClient
-
 
 def get_mask_rect(w, h):
     """
@@ -131,7 +128,7 @@ def slight_move_demo(clip):
             mask = mask * (1 - r) / 0.3
         mask = cv.merge((mask, mask, mask))
         im2 = im * (1 - mask) + im2 * mask
-        print 'all', time.time() - t0, r
+        print('all', time.time() - t0, r)
         return im2
     return clip.fl(mfl)
 
@@ -152,14 +149,17 @@ def calc_flow(im, mxi, myi, mxd, myd, width, height, r):
     if r <= 0.0001:
         return im.reshape((height, width, 3))
 
-    mx0 = mxi - mxd
+    mx0 = mxi - mxd * r
+    mx0 = np.minimum(width - 2, mx0)
     mx = mx0.astype('int')
     mu = mx0 - mx
+    mu = np.concatenate([mu[:, np.newaxis], mu[:, np.newaxis], mu[:, np.newaxis]], axis=1)
 
-    my0 = myi - myd
+    my0 = myi - myd * r
+    my0 = np.minimum(height - 2, my0)
     my = my0.astype('int')
     mv = my0 - my
-    mv = np.concatenate([mv, mv, mv], axis=1)
+    mv = np.concatenate([mv[:, np.newaxis], mv[:, np.newaxis], mv[:, np.newaxis]], axis=1)
 
     im2 = (1 - mv) * (1 - mu) * im[my * width + mx] + \
           mv * (1 - mu) * im[(my + 1) * width + mx] + \
@@ -232,7 +232,7 @@ def slight_move_matrix(clip, mxd, myd, T_a, T_b):
     return clip.fl(mfl)
 
 
-def get_straight_line_move((x1, y1), (x2, y2), tlen):
+def get_straight_line_move(x1, y1, x2, y2, tlen):
     """
     return a function desc straight move
     """
@@ -244,9 +244,9 @@ def demo():
     """
     =使用微动视频demo，需加载 mx，my两个移动向量矩阵，通过 draw flow绘制获得
     """
-    input_path = '../output/wallpaper/lego_bk2.jpg'
+    input_path = '../output/weidong/demo1.jpg'
     input_name = input_path.split('/')[-1].split('.')[0]
-    output_path = '../output/weidong_demo/' + input_name + '.mp4'
+    output_path = '../output/weidong/' + input_name + '.mp4'
     output_name = output_path.split('/')[-1]
     tmp_name = output_path[0: -4] + '_lop.mp4'
 
@@ -265,9 +265,6 @@ def demo():
     clip0 = mpy.concatenate([clip0, clip0, clip0, clip0, clip0, clip0])
     clip0.write_videofile(output_path)
     os.remove(tmp_name)
-
-    #bos_client = BosClient(bos_conf.config)
-    #bos_client.put_object_from_file('pa-test', output_name, output_path)
 
 
 if __name__ == '__main__':

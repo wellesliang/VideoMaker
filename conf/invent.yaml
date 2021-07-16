@@ -6,9 +6,14 @@ templates:
 
 item:
   image_num: 6
-  path: ../template/invent_20210712/items/bags.csv
+  path:
+    - ../items/invent/bags.csv
+    - ../items/invent/fragrances.csv
+    - ../items/invent/makeup.csv
+    - ../items/invent/skincare.csv
 
 demo:
+  used: false
   item_id: 3162943374
   image1: ../template/invent_20210712/demo/1.jpg
   image2: ../template/invent_20210712/demo/2.jpg

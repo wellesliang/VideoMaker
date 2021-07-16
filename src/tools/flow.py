@@ -37,7 +37,7 @@ class Flow(object):
 
         self.img = img = cv.imread(img_path, cv.IMREAD_UNCHANGED)
         if img is None:
-            print 'load img failed %s' % img_path
+            print('load img failed %s' % img_path)
             return
 
         self.flows = set()
@@ -107,7 +107,7 @@ class Flow(object):
         """
         bit = np.zeros(shape=(self.height, self.width), dtype='uint8')
         for tmp_i, (x0, y0, x1, y1) in enumerate(list(self.flows)):
-            print '\rprocessing %d/%d' % (tmp_i + 1, len(self.flows)),
+            print(f'\rprocessing {tmp_i + 1}/{len(self.flows)}', end='')
             sys.stdout.flush()
             MOVE_LEN = l2 = math.sqrt((x1 - x0) ** 2 + (y1 - y0) ** 2)
             xl = (x1 - x0) / l2
@@ -142,7 +142,7 @@ class Flow(object):
                     if 0 <= nx < self.width and 0 <= ny < self.height and bit[ny, nx] == 0:
                         bit[ny, nx] = 1
                         bfs.append((nx, ny))
-        print 'all finished'
+        print('all finished')
         ml2 = np.sqrt(self.mx * self.mx + self.my * self.my)
         ml2 = np.where(ml2 < 0.01, 999999999.0, ml2)
         self.mx = self.mx / ml2 * self.m_move_len

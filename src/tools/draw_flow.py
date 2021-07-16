@@ -14,7 +14,7 @@ Date:    2018/06/01 09:10:06
 import os
 import sys
 import cv2 as cv
-from flow import Flow
+from tools.flow import Flow
 
 #events = [i for i in dir(cv) if 'EVENT' in i]
 #print events
@@ -54,10 +54,10 @@ def draw_flow(event, x, y, flags, param):
 
 
 if __name__ == '__main__':
-    img_path = '../../output/weidong/cosmestic04.jpg'
+    img_path = '../../output/weidong/demo1.jpg'
     flow = Flow(img_path)
     if flow.is_invalid():
-        print 'init flow failed'
+        print('init flow failed')
         sys.exit()
 
     img = flow.get_img()
